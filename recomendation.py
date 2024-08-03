@@ -9,6 +9,7 @@ from deep_translator import GoogleTranslator
 from sklearn.metrics.pairwise import cosine_similarity
 import json
 from langchain_google_genai import ChatGoogleGenerativeAI
+from keras.models import load_model
 
 @st.cache_resource
 def load_models():
@@ -23,7 +24,7 @@ def predict_major(input_text: str, model_path="model_lstm_bert.h5", embed_model_
     with open('embedding_dataset.pkl', 'rb') as f:
         _, _, label_encoder = pickle.load(f)
     
-    model = tf.keras.models.load_model(model_path)
+    model = load_model(model_path)
 
     # Embed the input text
     embedded_text = embed_model_name.encode([input_text])
