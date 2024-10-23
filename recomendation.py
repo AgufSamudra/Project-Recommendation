@@ -152,7 +152,7 @@ def recommendation():
                     "Desain Grafis": link_desain_grafis
                 }
                 
-                llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key="AIzaSyAjVjTEYhTrCwIL_-Q0rBCV7HAOrqTuLd8")
+                llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key="AIzaSyC4B16h9YA7yU2rN4LW6yOh5wTum8MOItA")
                 llm = llm.invoke(f"""
 [CONTEXT]
 Rekomendasi Projek Freelance:
